@@ -1,14 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using TinyCsvParser.Mapping;
-using WebApplicationServer.Models;
-
-namespace WebApplicationServer.Mapping
+﻿namespace WebApplicationServer.Mapping
 {
+    using TinyCsvParser.Mapping;
+    using WebApplicationServer.Models;
+
+    /// <summary>
+    /// Class CustomerInfoMapping
+    /// </summary>
+    /// <seealso cref="TinyCsvParser.Mapping.CsvMapping{WebApplicationServer.Models.CustomerInfoModel}" />
     public class CustomerInfoMapping: CsvMapping<CustomerInfoModel>
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomerInfoMapping"/> class.
+        /// </summary>
         public CustomerInfoMapping()
         {
             MapProperty(0, x => x.PersonId);

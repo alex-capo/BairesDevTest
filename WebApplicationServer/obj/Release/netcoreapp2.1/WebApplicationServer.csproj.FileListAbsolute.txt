@@ -1,0 +1,15 @@
+C:\Users\wdeantonio\Source\Repos\BairesDevTest\WebApplicationServer\bin\Release\netcoreapp2.1\WebApplicationServer.deps.json
+C:\Users\wdeantonio\Source\Repos\BairesDevTest\WebApplicationServer\bin\Release\netcoreapp2.1\WebApplicationServer.runtimeconfig.json
+C:\Users\wdeantonio\Source\Repos\BairesDevTest\WebApplicationServer\bin\Release\netcoreapp2.1\WebApplicationServer.runtimeconfig.dev.json
+C:\Users\wdeantonio\Source\Repos\BairesDevTest\WebApplicationServer\bin\Release\netcoreapp2.1\WebApplicationServer.dll
+C:\Users\wdeantonio\Source\Repos\BairesDevTest\WebApplicationServer\bin\Release\netcoreapp2.1\WebApplicationServer.pdb
+C:\Users\wdeantonio\Source\Repos\BairesDevTest\WebApplicationServer\obj\Release\netcoreapp2.1\WebApplicationServer.csprojAssemblyReference.cache
+C:\Users\wdeantonio\Source\Repos\BairesDevTest\WebApplicationServer\obj\Release\netcoreapp2.1\WebApplicationServer.csproj.CoreCompileInputs.cache
+C:\Users\wdeantonio\Source\Repos\BairesDevTest\WebApplicationServer\obj\Release\netcoreapp2.1\WebApplicationServer.RazorAssemblyInfo.cache
+C:\Users\wdeantonio\Source\Repos\BairesDevTest\WebApplicationServer\obj\Release\netcoreapp2.1\WebApplicationServer.RazorAssemblyInfo.cs
+C:\Users\wdeantonio\Source\Repos\BairesDevTest\WebApplicationServer\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\wdeantonio\Source\Repos\BairesDevTest\WebApplicationServer\obj\Release\netcoreapp2.1\WebApplicationServer.AssemblyInfoInputs.cache
+C:\Users\wdeantonio\Source\Repos\BairesDevTest\WebApplicationServer\obj\Release\netcoreapp2.1\WebApplicationServer.AssemblyInfo.cs
+C:\Users\wdeantonio\Source\Repos\BairesDevTest\WebApplicationServer\obj\Release\netcoreapp2.1\WebApplicationServer.RazorTargetAssemblyInfo.cache
+C:\Users\wdeantonio\Source\Repos\BairesDevTest\WebApplicationServer\obj\Release\netcoreapp2.1\WebApplicationServer.dll
+C:\Users\wdeantonio\Source\Repos\BairesDevTest\WebApplicationServer\obj\Release\netcoreapp2.1\WebApplicationServer.pdb

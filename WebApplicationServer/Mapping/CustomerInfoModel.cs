@@ -1,8 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace WebApplicationServer.Models
+﻿namespace WebApplicationServer.Models
 {
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    /// <summary>
+    /// Model CustomerInfo
+    /// </summary>
     public class CustomerInfoModel
     {
         [Key]

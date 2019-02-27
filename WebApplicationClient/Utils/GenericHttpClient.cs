@@ -1,36 +1,39 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Internal;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
-using WebApplicationServer.Models;
-
-namespace WebApplicationServer.Utils
+﻿namespace WebApplicationServer.Utils
 {
+    using Newtonsoft.Json;
+    using System.Net.Http;
+    using WebApplicationServer.Models;
+
+    /// <summary>
+    /// Class GenericHttpClient
+    /// </summary>
     public class GenericHttpClient
-    {
-        private const string Url = "https://localhost:44380/api/ProcessFile/UploadFile";
-
+    {        
+        /// <summary>
+        /// The URL
+        /// </summary>
+        private static string Url = "https://webapplicationserver20190227113806.azurewebsites.net/api/ProcessFile/UploadFile";
+        
+        /// <summary>
+        /// Posts the file generic.
+        /// </summary>
+        /// <param name="byteFile">The byte file.</param>
+        /// <returns></returns>
         public static HttpResponseMessage PostFileGeneric(FileProcess byteFile)
-        {
-            var response = new HttpResponseMessage();
-            var url = $"{Url}/";
-            var content = JsonConvert.SerializeObject(byteFile);
-            var httpContent = new StringContent(content, System.Text.Encoding.UTF8, "application/json");
+        {          
+            HttpResponseMessage response = new HttpResponseMessage();
+            string url = $"{Url}/";
+            string content = JsonConvert.SerializeObject(byteFile);
+            StringContent httpContent = new StringContent(content, System.Text.Encoding.UTF8, "application/json");
 
-            using (var client = new HttpClient())
+            using (HttpClient client = new HttpClient())
             {
-                var resp = client.PostAsync(url, httpContent).Result;
+                HttpResponseMessage resp = client.PostAsync(url, httpContent).Result;
                 if (!resp.IsSuccessStatusCode)response.StatusCode = System.Net.HttpStatusCode.BadRequest;
-                var contentResponse = resp?.Content?.ReadAsStringAsync()?.Result;
+                string contentResponse = resp?.Content?.ReadAsStringAsync()?.Result;
                 response.Content = new StringContent(contentResponse?? string.Empty);
             }
             return response;
         }
-
     }
 }

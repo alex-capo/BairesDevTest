@@ -1,18 +1,30 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.IO;
-using WebApplicationServer.Models;
-
-namespace WebApplicationServer.Controllers
+﻿namespace WebApplicationServer.Controllers
 {
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.AspNetCore.Mvc;
+    using System.IO;
+    using WebApplicationServer.Models;
+
+    /// <summary>
+    /// Home Controller 
+    /// </summary>
+    /// <seealso cref="Microsoft.AspNetCore.Mvc.Controller" />
     public class HomeController : Controller
     {
+        /// <summary>
+        /// Indexes this instance.
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             return View();
         }
 
+        /// <summary>
+        /// Sends the file.
+        /// </summary>
+        /// <param name="file">The file.</param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult SendFile(IFormFile file)
         {
@@ -39,7 +51,7 @@ namespace WebApplicationServer.Controllers
             System.Net.Http.HttpResponseMessage content = Utils.GenericHttpClient.PostFileGeneric(fileToProcess);
             byte[] bytes = content.Content.ReadAsByteArrayAsync().Result;
             Response.ContentType = "text/plain";
-            Response.Headers["Content-Disposition"] = $"attachment; filename=peopleOut_{DateTime.Today.ToString("M/d/yy HH:mm:ss")}.txt";
+            Response.Headers["Content-Disposition"] = $"attachment; filename=people.out";
             return File(bytes, System.Net.Mime.MediaTypeNames.Text.Plain);
         }
     }

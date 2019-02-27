@@ -1,17 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TinyCsvParser;
-using WebApplicationServer.Mapping;
-using WebApplicationServer.Models;
-
-namespace WebApplicationServer.Repository
+﻿namespace WebApplicationServer.Repository
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Text;
+    using TinyCsvParser;
+    using WebApplicationServer.Mapping;
+    using WebApplicationServer.Models;
+
+    /// <summary>
+    /// Class ProcessFileRepository
+    /// </summary>
+    /// <seealso cref="WebApplicationServer.Repository.IProcessFileRepository" />
     public class ProcessFileRepository : IProcessFileRepository
     {
+        /// <summary>
+        /// Gets the customer infos.
+        /// </summary>
+        /// <param name="bytesFile">The bytes file.</param>
+        /// <returns></returns>
         public IEnumerable<CustomerInfo> GetCustomerInfos(byte[] bytesFile)
         {
             var customerList = new List<CustomerInfo>();
@@ -46,6 +54,11 @@ namespace WebApplicationServer.Repository
             return customerList;
         }
 
+        /// <summary>
+        /// Saves to text.
+        /// </summary>
+        /// <param name="customers">The customers.</param>
+        /// <returns></returns>
         public byte[] SaveToText(IEnumerable<CustomerInfo> customers)
         {
             string path = $"{Directory.GetCurrentDirectory()}\\people.out";
